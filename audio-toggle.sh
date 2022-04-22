@@ -1,4 +1,8 @@
 #!/bin/bash
+# Toggles the bluetooth headset profile from "a2dp_sink" (stereo output only)
+# to "headset_head_unit" (mono output and headset microphone input),
+# allowing the built-in microphone to be used. Using Bose NC 700 headset. 
+
 audio_profile=$(
     echo $(~/myscripts/./audio-status.sh) | awk '{print $6}'
 )
